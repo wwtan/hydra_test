@@ -1,0 +1,155 @@
+---
+title: Architecture
+description: Learn how Research-Bot operates through its intelligent agent architecture
+---
+
+<div class="content">
+    <div class="workflow-image">
+        <img src="/images/agentic workflow.png" alt="Research-Bot Agentic Workflow" width="100%">
+    </div>
+    <section class="system-overview">
+        <div class="description">
+            <p class="system-description">
+    Research-Bot operates through a coordinated trio of intelligent agents: 
+    <span class="agent planner">planner</span>, 
+    <span class="agent researcher">researcher</span>, and 
+    <span class="agent writer">writer</span>. 
+    The <span class="agent planner">planner</span> outlines the scope of the research, creating subtopics and key questions. 
+    The <span class="agent researcher">researcher</span> collects relevant data based on this framework, using a wide range of information sources. 
+    Lastly, the <span class="agent writer">writer</span> compiles the findings into a coherent and well-organized report.
+</p></p>
+        </div>
+    </section>
+
+    <section class="workflow">
+        <h2>Workflow Summary</h2>
+        <ul class="workflow-steps">
+            <li>Create a task-specific agent optimized for the research objective.</li>
+            <li>Break down the core topic into strategic questions that promote balanced exploration.</li>
+            <li>Use a data-collection agent to retrieve information for each sub-question.</li>
+            <li>Summarize the results, maintaining source traceability.</li>
+            <li>Aggregate and refine the content into a detailed, final research report.</li>
+        </ul>
+    </section>
+</div>
+
+<style>
+    .content {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .section-overview, .section-workflow {
+        padding: 4em 0;
+    }
+
+    .section-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .section-overview {
+        background: linear-gradient(135deg, #e0f7fa 0%, #e8f5e9 100%);
+    }
+
+    .section-workflow {
+        background: linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%);
+    }
+
+    h1, h2 {
+        color: #1a237e;
+        margin-bottom: 1.5em;
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .workflow-image {
+        margin: 2em auto;
+        max-width: 90%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        background: white;
+        padding: 20px;
+    }
+
+    .workflow-steps {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        padding: 2em;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        list-style-type: none;
+        counter-reset: workflow-counter;
+    }
+
+    .workflow-steps li {
+        position: relative;
+        margin-bottom: 1.5em;
+        padding: 1.2em 1.5em 1.2em 3.5em;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        font-size: 1.2em;
+        line-height: 1.8;
+        color: #23cb74;
+        border-left: 4px solid #23cb74;
+    }
+
+    .workflow-steps li:before {
+        content: counter(workflow-counter);
+        counter-increment: workflow-counter;
+        position: absolute;
+        left: 1em;
+        color: #23cb74;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    .workflow-steps li:hover {
+        transform: translateX(5px);
+        box-shadow: 0 5px 15px rgba(65, 130, 228, 0.1);
+    }
+
+    .workflow-steps li:last-child {
+        margin-bottom: 0;
+    }
+
+    .system-description {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 1em;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        font-size: 1.4em;
+        line-height: 1.8;
+        color: #365ce5;
+    }
+
+    .agent {
+        display: inline-block;
+        padding: 2px 8px;
+        margin: 0 2px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .agent.planner {
+        color: #2980b9;
+        background: rgba(41, 128, 185, 0.1);
+        border-bottom: 2px solid #2980b9;
+    }
+
+    .agent.researcher {
+        color: #27ae60;
+        background: rgba(39, 174, 96, 0.1);
+        border-bottom: 2px solid #27ae60;
+    }
+
+    .agent.writer {
+        color: #8e44ad;
+        background: rgba(142, 68, 173, 0.1);
+        border-bottom: 2px solid #8e44ad;
+    }
+</style>

@@ -1,0 +1,106 @@
+---
+title: Our team
+description: >-
+  With PhDs in Computer Science and Biomedical Science, we're a powerhouse team blending technical depth and domain insight to build transformative AI tools for the future of research
+---
+
+<p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong> Manage Staff members</a></p>
+<ul class="staff">
+	{% for person in site.staff_members %}
+		<li>
+			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
+			<div class="name">
+				<a target="_blank" href="https://twitter.com/{{ person.twitter }}"
+				{% if person.name == 'Sara Tan' %} style="color:#9045c3ff;"{% endif %}
+				{% if person.name == 'Weijie Tan' %} style="color:#9045c3ff;"{% endif %}>
+					{{ person.name }}
+				</a>
+			</div>
+			<div class="position">{{ person.position }}</div>
+		</li>
+	{% endfor %}
+</ul>
+
+<style>
+.vision-section {
+  margin: 3em 0 2em 0;
+}
+.vision-heading {
+  text-align: center;
+  font-size: 2.3em;
+  font-weight: 300;
+  color: #bf2460;
+  margin-bottom: 2em;
+}
+.vision-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: center;
+}
+.vision-card {
+  background: #fff8fb;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(65,130,228,0.07);
+  padding: 2em 1.5em;
+  min-width: 260px;
+  max-width: 340px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 4px solid #f6d1de;
+}
+.vision-icon {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.vision-title {
+  font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #bf2460;
+  margin-bottom: 0.5em;
+}
+.vision-quote {
+  font-style: italic;
+  color: #2c3e50;
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0;
+}
+.page-title, h1.page-title, h1 {
+  color: #9045c3ff !important;
+}
+</style>
+
+<div class="vision-section">
+  <div class="vision-heading">Our Vision</div>
+  <div class="vision-cards">
+    <div class="vision-card">
+      <div class="vision-icon">🔬</div>
+      <div class="vision-title">Focused on Purpose & Impact</div>
+      <div class="vision-quote">"To empower researchers with intelligent tools that streamline discovery, elevate research quality, and drive innovation across disciplines."</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-icon">⚡</div>
+      <div class="vision-title">Efficiency & Innovation</div>
+      <div class="vision-quote">"To transform how research is done—by replacing manual grunt work with AI-powered insight, so researchers can focus on discovery, not data wrangling."</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-icon">🌍</div>
+      <div class="vision-title">Global Contribution to Knowledge</div>
+      <div class="vision-quote">"To accelerate research and development worldwide by making advanced literature analysis seamless, intelligent, and accessible to all."</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-icon">🧠</div>
+      <div class="vision-title">Insight-Driven Vision</div>
+      <div class="vision-quote">"To harness AI in unlocking deeper, faster, and more meaningful insights—fueling a new era of research excellence across every field."</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-icon">🚀</div>
+      <div class="vision-title">Bold & Future-Oriented</div>
+      <div class="vision-quote">"To redefine the future of research by building AI tools that amplify human intelligence and catalyse breakthroughs at scale."</div>
+    </div>
+  </div>
+</div>

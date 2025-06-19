@@ -37,6 +37,8 @@ header {
 	.company-name {
 		font-size: 1.7em;
 		line-height: 0;
+		margin-top: 1px;
+		margin-left: 1px;
 
 		a {
 			display: inline-block;
@@ -45,6 +47,7 @@ header {
 		img {
 			display: block;
 			width: auto;
+			margin: 0;
 		}
 	}
 }
