@@ -35,11 +35,17 @@
 					{% for column in site.data.footer %}
 					<ul class="footer-links">
 						{% for link in column.links %}
-							<li><a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon }}-icon"{% endif %}>
-								{% if link.social_icon %}
-									{% include social-icon.html icon=link.social_icon %}
+							<li>
+								{% if link.is_title %}
+									<span class="footer-title">{{ link.name }}</span>
+								{% else %}
+									<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon }}-icon"{% endif %}>
+										{% if link.social_icon %}
+											{% include social-icon.html icon=link.social_icon %}
+										{% endif %}
+										{{ link.name }}</a>
 								{% endif %}
-								{{ link.name }}</a></li>
+							</li>
 						{% endfor %}
 					</ul>
 					{% endfor %}

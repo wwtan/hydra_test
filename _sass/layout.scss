@@ -10,6 +10,7 @@
 
 .container {
 	max-width: 1140px;
+	margin-left: 0;
 
 	&.max-container {
 		max-width: 100%;
@@ -128,15 +129,21 @@ blockquote:before {
 	margin: 25px auto 0 auto;
 	position: relative;
 	border-radius: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, #e0f7fa 0%, #54545421 100%);
+	box-shadow: 0 6px 24px rgba(45, 47, 48, 0.28), 0 0 0 6px #fff;
+	border: 3px solid #3c3c3c19;
 
 	img {
-		position: absolute;
-		left: -1000%;
-		right: -1000%;
-		top: -1000%;
-		bottom: -1000%;
-		margin: auto;
-		width: 300px;
+		position: static;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: center;
+		border-radius: 200px;
+		box-shadow: 0 2px 8px rgba(0,153,255,0.10);
 	}
 }
 

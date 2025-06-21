@@ -1,6 +1,40 @@
 ---
 title:
 ---
+<!-- Place this at the very start of your HTML file -->
+<div class="coming-soon-banner">
+  Coming Soon
+</div>
+<style>
+.coming-soon-banner {
+  width: 100vw;
+  text-align: center;
+  font-family: 'San Francisco', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 5em;
+  font-weight: 1000;
+  padding: 1.2em 0 1em 0;
+  /* Gradient text styles */
+  background: none;
+  background-image: linear-gradient(270deg, #009dff, #00ffb3, #00cfff);
+  background-size: 200% 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-text-move 2s ease-in-out infinite alternate;
+  letter-spacing: 0.005em;
+}
+
+@keyframes gradient-text-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+</style>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
 
@@ -22,44 +56,44 @@ title:
 }
 </style>
 
-<h1 class="hero-title cool-hover">AI-powered Research Assistant</h1>
+<h1 class="hero-title cool-hover">AI-powered document analysis at <strong>Superhuman Speed</strong></h1>
 
 <!-- Unified Overview Section -->
 <div class="overview-unified" style="background: linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%); border-radius: 18px; box-shadow: 0 4px 24px 0 rgba(0, 153, 255, 0.08); max-width: 1100px; margin: 2.5em auto 2em auto; padding: 2.5em 2em 2em 2em;">
   <div class="section-overview">
     <div class="section-content">
-      <p>Effortlessly discover the most relevant academic papers from <strong>over 120 million publications</strong>. Say <span class="hero-strong hero-orange">goodbye to manual searching</span> and <span class="hero-strong hero-blue2">hello to confident, evidence-based insights</span>.</p>
+      <p><strong>Automate insight extraction and analysis across multiple documents</strong> - just ask your question, and let the AI do the heavy lifting</p>
     </div>
   </div>
   <div style="text-align:center; margin:2em 0 2em 0;">
     <a href="#" class="get-started-btn">Get Started Free</a>
   </div>
   <div class="feature-section">
-    <div class="feature-heading">Uncover Key Scientific Papers in Seconds with AI</div>
+    <div class="feature-heading">Unlock Instant Insights from Your Documents with AI</div>
     <div class="feature-cards">
       <div class="feature-card">
-        <h3>Scan Millions of Papers in Seconds</h3>
-        <p>Search across 120+ million publications and get precise results that match your research needs.</p>
+        <h3>Find What Matters Fast</h3>
+        <p>Quickly locate key information across your documents without manual searching.</p>
       </div>
       <div class="feature-card">
-        <h3>Discover Relevant Research Instantly</h3>
-        <p>Find the most pertinent academic papers for your query—no more endless scrolling or guesswork.</p>
+        <h3>Analyse Multiple Files Simultaneously</h3>
+        <p>Compare, summarise and extract insights from multiple documents in seconds.</p>
       </div>
       <div class="feature-card">
-        <h3>Structured Summaries</h3>
-        <p>Get clean, concise overviews of complex studies—so you can focus on insight, not interpretation.</p>
+        <h3>Generate Actionable Insights Instantly</h3>
+        <p>Turn hours of reading into useful insights in moments using AI.</p>
       </div>
       <div class="feature-card">
-        <h3>Comprehensive and Unbiased Discovery</h3>
-        <p>Our AI screens sources objectively to ensure a complete and balanced literature landscape.</p>
+        <h3>Instant Clarity</h3>
+        <p>Cut through the clutter with lightning-fast summaries that highlight exactly what you need to know. No noise—just the essentials.</p>
       </div>
       <div class="feature-card">
-        <h3>Accuracy You Can Trust</h3>
-        <p>All results are grounded in real publications—no hallucinations, just credible research from trusted sources.</p>
+        <h3>Precision</h3>
+        <p>All answers come straight from your documents, with no AI hallucination. Reliable, fact-based, and always verifiable.</p>
       </div>
       <div class="feature-card">
-        <h3>Direct Citations, Fully Traceable</h3>
-        <p>Each summary includes clickable citations, making it easy to verify sources and explore further.</p>
+        <h3>Citations at Your Fingertips</h3>
+        <p>Every insight is fully traceable. Clickable links show exactly where the answer came from—making validation quick and effortless.</p>
       </div>
     </div>
   </div>

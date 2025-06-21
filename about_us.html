@@ -9,17 +9,41 @@ description: >-
 	{% for person in site.staff_members %}
 		<li>
 			<div class="square-image"><img src="{% include relative-src.html src=person.image_path %}" alt="{{ person.name }}"/></div>
-			<div class="name">
-				<a target="_blank" href="https://twitter.com/{{ person.twitter }}"
-				{% if person.name == 'Sara Tan' %} style="color:#9045c3ff;"{% endif %}
-				{% if person.name == 'Weijie Tan' %} style="color:#9045c3ff;"{% endif %}>
-					{{ person.name }}
-				</a>
+			<div class="name"
+				{% if person.name == 'Sara Tan' or person.name == 'Weijie Tan' %} style="color:#1a237e;"{% endif %}>
+				{{ person.name }}
 			</div>
 			<div class="position">{{ person.position }}</div>
+			{% if person.blurb %}
+			  <div class="blurb">{{ person.blurb }}</div>
+			{% endif %}
 		</li>
 	{% endfor %}
 </ul>
+
+
+<div class="vision-section">
+  <div class="vision-heading">Our Vision</div>
+  <div class="vision-cards two-col">
+    <div class="vision-card">
+      <div class="vision-title">Efficiency & Innovation</div>
+      <div class="vision-quote">"To transform how research is done—by replacing manual grunt work with AI-powered insight, so researchers can focus on discovery, not data wrangling."</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-title">Global Contribution to Knowledge</div>
+      <div class="vision-quote">"To accelerate research and development worldwide by making advanced literature analysis seamless, intelligent, and accessible to all."</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-title">Insight-Driven Vision</div>
+      <div class="vision-quote">"To harness AI in unlocking deeper, faster, and more meaningful insights—fueling a new era of research excellence across every field."</div>
+    </div>
+    <div class="vision-card">
+      <div class="vision-title">Bold & Future-Oriented</div>
+      <div class="vision-quote">"To redefine the future of research by building AI tools that amplify human intelligence and catalyse breakthroughs at scale."</div>
+    </div>
+  </div>
+</div>
+
 
 <style>
 .vision-section {
@@ -29,7 +53,7 @@ description: >-
   text-align: center;
   font-size: 2.3em;
   font-weight: 300;
-  color: #bf2460;
+  color: #0099ff;
   margin-bottom: 2em;
 }
 .vision-cards {
@@ -39,9 +63,9 @@ description: >-
   justify-content: center;
 }
 .vision-card {
-  background: #fff8fb;
+  background: #ffffff;
   border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(65,130,228,0.07);
+  box-shadow: 0 2px 10px rgba(253, 253, 253, 0.07);
   padding: 2em 1.5em;
   min-width: 260px;
   max-width: 340px;
@@ -49,7 +73,7 @@ description: >-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-left: 4px solid #f6d1de;
+  border-left: 4px solid #d1f6d7;
 }
 .vision-icon {
   font-size: 2em;
@@ -58,8 +82,8 @@ description: >-
 .vision-title {
   font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
   font-size: 1.3em;
-  font-weight: 600;
-  color: #bf2460;
+  font-weight: 300;
+  color: #0099ff;
   margin-bottom: 0.5em;
 }
 .vision-quote {
@@ -68,39 +92,70 @@ description: >-
   font-size: 1em;
   line-height: 1.6;
   margin: 0;
+  font-weight: 200;
 }
-.page-title, h1.page-title, h1 {
-  color: #9045c3ff !important;
+
+.vision-cards.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em 2em;
+  justify-items: stretch;
+  align-items: stretch;
+  background: none;
+  border-radius: 0;
+  padding: 0 1em;
+  box-shadow: none;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.vision-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,153,255,0.13);
+  padding: 2em 1.5em 1.5em 1.5em;
+  min-width: 220px;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1.5px solid #00e1ff66;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 0;
+  z-index: 1;
+}
+.vision-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 12px 36px rgba(0,153,255,0.22);
+  background: #ffffff;
+}
+.vision-title {
+  font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
+  font-size: 1.15em;
+  font-weight: 400;
+  color: #0099ff;
+  margin-bottom: 0.4em;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
+.vision-quote {
+  font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
+  color: #00334d;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .vision-cards.two-col {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+    padding: 0;
+  }
+  .vision-card {
+    max-width: 95vw;
+  }
 }
 </style>
-
-<div class="vision-section">
-  <div class="vision-heading">Our Vision</div>
-  <div class="vision-cards">
-    <div class="vision-card">
-      <div class="vision-icon">🔬</div>
-      <div class="vision-title">Focused on Purpose & Impact</div>
-      <div class="vision-quote">"To empower researchers with intelligent tools that streamline discovery, elevate research quality, and drive innovation across disciplines."</div>
-    </div>
-    <div class="vision-card">
-      <div class="vision-icon">⚡</div>
-      <div class="vision-title">Efficiency & Innovation</div>
-      <div class="vision-quote">"To transform how research is done—by replacing manual grunt work with AI-powered insight, so researchers can focus on discovery, not data wrangling."</div>
-    </div>
-    <div class="vision-card">
-      <div class="vision-icon">🌍</div>
-      <div class="vision-title">Global Contribution to Knowledge</div>
-      <div class="vision-quote">"To accelerate research and development worldwide by making advanced literature analysis seamless, intelligent, and accessible to all."</div>
-    </div>
-    <div class="vision-card">
-      <div class="vision-icon">🧠</div>
-      <div class="vision-title">Insight-Driven Vision</div>
-      <div class="vision-quote">"To harness AI in unlocking deeper, faster, and more meaningful insights—fueling a new era of research excellence across every field."</div>
-    </div>
-    <div class="vision-card">
-      <div class="vision-icon">🚀</div>
-      <div class="vision-title">Bold & Future-Oriented</div>
-      <div class="vision-quote">"To redefine the future of research by building AI tools that amplify human intelligence and catalyse breakthroughs at scale."</div>
-    </div>
-  </div>
-</div>

@@ -1,15 +1,18 @@
 - links:
-  - name: About Us
-    link: /about_us/
+  - name: PRODUCTS
+    is_title: true
   - name: Research-Bot
-    link: /research-bot/
+    link: /research-bot1/
   - name: Analysis-Bot
-    link: /analysis-bot/
+    link: /analysis-bot1/
 - links:
-  - name: Pricing
-    link: /pricing/
-  - name: Contact
-    link: /contact/
+  - name: CONTACT US
+    is_title: true
+  - name: stan.suee@gmail.com
+    link: mailto:stan.suee@gmail.com
+- links:
+  - name: SOCIAL
+    is_title: true
   - name: GitHub
     link: https://github.com/Sara-Tan
     new_window: true

@@ -1,6 +1,6 @@
 ---
 name: Sara Tan
-position: Agentic AI developer and Marketing
-image_path: https://source.unsplash.com/collection/139386/601x601?a=.png
-blurb: Sara enjoys hiking, pilates and hotspring bath
+position: 
+image_path: /images/sara_tan1.jpeg
+blurb:  She specialises in developing computational tools and machine learning algorithms for quantitative image and data analysis in biomedical research. Sara holds a PhD in Biomedical Science from the University of Sheffield, UK, and an MSc in Biomedical Engineering from RWTH Aachen University, Germany.
 ---
