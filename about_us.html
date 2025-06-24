@@ -1,8 +1,43 @@
 ---
-title: Our team
-description: >-
-  With PhDs in Computer Science and Biomedical Science, we're a powerhouse team blending technical depth and domain insight to build transformative AI tools for the future of research
+title: 
 ---
+<!-- Place this at the very start of your HTML file -->
+<div class="coming-soon-banner">
+  Our Team
+</div>
+<style>
+.coming-soon-banner {
+  width: 100vw;
+  text-align: center;
+  font-family: 'San Francisco', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 3em;
+  font-weight: 1000;
+  padding: 0em 0 0em 0;
+  /* Gradient text styles */
+  background: none;
+  background-image: linear-gradient(230deg, #009dff, #01d696,  #5100ff, #ff00d9);
+  background-size: 200% 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-text-move 2s ease-in-out infinite alternate;
+  letter-spacing: 0.005em;
+}
+
+@keyframes gradient-text-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+</style>
+
+<div class="team-desription" style="text-align:center;">
+	 <p>With PhDs in Computer Science and Biomedical Science, we're a powerhouse team blending technical depth and domain insight to build transformative AI tools for the future of research</p>
+</div>
 
 <p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong> Manage Staff members</a></p>
 <ul class="staff">
@@ -50,11 +85,22 @@ description: >-
   margin: 3em 0 2em 0;
 }
 .vision-heading {
+  width: 100vw;
   text-align: center;
-  font-size: 2.3em;
-  font-weight: 300;
-  color: #0099ff;
-  margin-bottom: 2em;
+  font-family: 'San Francisco', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 3em;
+  font-weight: 1000;
+  padding: 0.6em 0 0.4em 0;
+  margin: 0 auto 0.5em auto;
+  background: none;
+  background-image: linear-gradient(270deg, #009dff, #01d696, #003cff);
+  background-size: 200% 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-text-move 2s ease-in-out infinite alternate;
+  letter-spacing: 0.005em;
 }
 .vision-cards {
   display: flex;

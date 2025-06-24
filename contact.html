@@ -1,7 +1,9 @@
 ---
-title: Contact
-heading: Get in touch today
 ---
+<div class="contact-heading-banner">
+  Get in touch today
+</div>
+
 <div class="contact-highlights-oval">
   <span class="highlight-oval">
     <span class="highlight-oval-text">Research Partnerships</span>
@@ -24,7 +26,7 @@ heading: Get in touch today
 <h2 style="text-align:center; margin-top:2.5em;">Contact Us Directly</h2>
 <p style="display:flex; align-items:center; justify-content:center; gap:0.6em; text-align:center; font-size:1.13em; font-weight:500;">
   <span class="contact-icon" aria-label="Email" title="Email">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke= "#ff9900 " stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;">
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke= "#ff9900 " stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;">
       <rect x="3" y="5" width="18" height="14" rx="2.5"/>
       <polyline points="3,7 12,13 21,7"/>
     </svg>
@@ -33,6 +35,32 @@ heading: Get in touch today
 </p>
 
 <style>
+.contact-heading-banner {
+  width: 100vw;
+  text-align: center;
+  font-family: 'San Francisco', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 3em;
+  font-weight: 1000;
+  padding: 0em 0 0em 0; /* Reduced top and bottom padding */
+  margin-top: 0; /* Remove any default margin */
+  background: none;
+  background-image: linear-gradient(230deg, #009dff, #01d696, #5100ff, #ff00d9);
+  background-size: 200% 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-text-move 2s ease-in-out infinite alternate;
+  letter-spacing: 0.005em;
+}
+@keyframes gradient-text-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 .simple-contact-info {
   max-width: 500px;
   margin: 2.5em auto 0 auto;
@@ -205,9 +233,18 @@ heading: Get in touch today
   border-radius: 50%;
   transition: filter 0.2s, transform 0.2s;
 }
+@keyframes mailbox-wiggle {
+  0% { transform: rotate(-10deg); }
+  20% { transform: rotate(10deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(10deg); }
+  80% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
 .contact-icon svg:hover {
+  animation: mailbox-wiggle 0.7s infinite;
   filter: drop-shadow(0 0 2px #ffb300bb) drop-shadow(0 0 5px #ffe100);
-  transform: scale(1.08) rotate(-10deg);
+  transform: scale(1.08);
 }
 </style>
 
