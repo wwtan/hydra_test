@@ -2,8 +2,8 @@
 # Site
 
 title: Hydra Template
-url: "https://proud-alligator.cloudvent.net"
-baseurl:
+url: "https://wwtan.github.io/hydra_test"
+baseurl: "https://wwtan.github.io/hydra_test"
 google_analytics_key:
 google_maps_javascript_api_key:
 disqus_shortname:
@@ -11,9 +11,9 @@ disqus_shortname:
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
 description: Product marketing template for Jekyll.
-author:
-  name:
-  email:
+author: wwtan
+  name: "wwtan"
+  email: "wwtan@example.com"
   twitter: # twitter username without the @ symbol
 social:
   name: Hydra Template

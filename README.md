@@ -78,3 +78,31 @@ Hydra is already optimised for adding, updating and removing pages, staff, advic
 
 * Exposed as a data file to give clients better access.
 * Set in the *Data* / *Footer* section.
+
+
+## Local setup guide (MacOS)
+```bash
+# this file requires higher version of bundler, which is conflicting with MacOS ruby environment
+
+# Step 1. set up user level ruby environment
+brew install rbenv ruby-build
+
+echo 'eval "$(rbenv init -)"' >> ~/.zprofile
+exec "$SHELL"
+
+rbenv install 3.4.4
+rbenv global 3.4.4
+
+# Step 2: install bundler and stuff
+gem install bundler
+bundle install
+bundler exec jekyll server
+
+```
+
+## Deployment steps
+1. activate GitHub Pages in setting
+   - use Deploy from a branch
+1. Add your site and author details in `_config.yml`.
+2. Add your Google Analytics and Disqus keys to `_config.yml`.
+3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
